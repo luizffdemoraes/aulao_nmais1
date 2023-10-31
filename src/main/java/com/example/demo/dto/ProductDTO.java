@@ -26,6 +26,7 @@ public class ProductDTO {
 	public ProductDTO(Product product) {
 		id = product.getId();
 		name = product.getName();
+		//lazy loading
 		categories = product.getCategories().stream().map(x -> new CategoryDTO(x)).collect(Collectors.toList());
 	}
 
